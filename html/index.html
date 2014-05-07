@@ -3,23 +3,45 @@
   <head>
     <meta charset="utf-8">
     <title>Handbook</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="An introduction to creating personas, user or job stories, and basic wireframes for a website.">
+    <meta name="author" content="Charles F. Munat">
+    <link rel="stylesheet" href="/css/bootstrap.css" media="all">
+    <link rel="stylesheet" href="/css/bootstrap.css" media="all">
     <link rel="stylesheet" href="/css/main.css" media="all">
+    <!--[if lt IE 9]>
+      <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="//oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
   </head>
   <body>
     <header role="banner">
-      <h1 id="logo"><a href="/" title="To the home page">Handbook</a></h1>
-      <nav id="site-navigation" role="navigation">
-        <h2>Site navigation</h2>
-        <ul role="menubar">
-          <li role="presentation"><a href="/setup" role="menuitem">Setup</a></li>
-          <li role="presentation"><a href="/primer" role="menuitem">Primer</a></li>
-          <li role="presentation"><a href="/about-us" role="menuitem">About us</a></li>
-          <li role="presentation"><a href="/contact-us" role="menuitem">Contact us</a></li>
-        </ul>
-      </nav>
+       <div class="navbar navbar-default navbar-fixed-top">
+         <div class="container">
+           <div class="navbar-header" role="navigation">
+             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+               <span class="sr-only">Toggle navigation</span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+             </button>
+             <h1><a class="navbar-brand" href="/">Handbook</a></h1>
+           </div>
+           <nav class="navbar-collapse collapse" role="navigation">
+             <h2 class="sr-only">Site Navigation</h2>
+             <ul class="nav navbar-nav" role="menubar">
+               <li role="presentation"><a href="/setup" role="menuitem">Setup</a></li>
+               <li role="presentation"><a href="/primer" role="menuitem">Primer</a></li>
+               <li role="presentation"><a href="/about-us" role="menuitem">About us</a></li>
+               <li role="presentation"><a href="/contact-us" role="menuitem">Contact us</a></li>
+             </ul> 
+          </nav>
+        </div>
+      </div>
     </header>
-    <main role="main">
-      <aside id="sidebar" class="col-md-3 sidebar-nav">
+    <main class="container" role="main">
+      <div class="row">
+      <aside id="sidebar" class="col-md-3">
         <h2 class="sr-only">Sidebar</h2>
         <nav role="navigation">
           <h3 class="sr-only">Topic/page navigation</h3>
@@ -121,7 +143,7 @@
           </ol>
         </nav>
       </aside>
-      <article id="lesson">
+      <article id="lesson" class="col-md-9">
         <header>
           <h2>Lesson: Wireframing and review</h2>
         </header>
@@ -656,13 +678,15 @@
           </section>
         </footer>
       </article>
+    </div>
     </main>
-    <footer>
-      <section id="copyright">
+    <footer class="container">
+      <div class="row">
+      <section id="copyright" class="col-md-3">
         <h2>Copyright</h2>
         <!-- site copyright here -->
       </section>
-      <nav id="site-map" role="navigation">
+      <nav id="site-map" role="navigation" class="col-md-6">
         <h2>Site map</h2>
         <ul role="menu">
           <li role="presentation"><a href="/setup" role="menuitem">Setup</a></li>
@@ -674,10 +698,12 @@
         </ul>
       </nav>
     </footer>
-    <section id="contact">
+    <section id="contact" class="col-md-3">
         <h2>Contact info</h2>
       <!-- contact info here -->
     </section>
+    <script src="//code.jquery-1.10.2.js"></script>
+    <script src="/js/bootstrap.js"></script>
     <script src="/js/main.js"></script>
   </body>
 </html>
